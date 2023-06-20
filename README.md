@@ -31,9 +31,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 To Do List Project <a name="about-project" id="about-project"></a>
+# 📖 Leaderboard List Project <a name="about-project" id="about-project"></a>
 
-***To Do List Project*** is a simple app that you can use to list your daily tasks. 
+***Leaderboard List Project*** is a website that displays scores submitted by different players. 
 
 ## 🛠 Built With <a name="built-with"></a>
 - HTML.
