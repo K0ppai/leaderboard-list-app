@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+#main-title {
+  font-size: 60px;
+}
+
+#score-title,
+#add-score-title {
+  font-size: 40px;
+}
