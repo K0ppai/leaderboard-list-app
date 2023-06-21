@@ -1,4 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+
+* {
+  color: white;
+  font-family: 'Bungee Spice', cursive;
+}
+
+.add-score-container,
+body {
+  background-color: #110820;
+}
 
 #main-title {
   font-size: 60px;
@@ -6,5 +16,55 @@
 
 #score-title,
 #add-score-title {
-  font-size: 40px;
+  font-size: 35px;
+}
+
+#player-scores li:nth-child(even) {
+  background-color: #1d0f39;
+}
+
+#player-scores {
+  border-radius: 0 60px 0 60px;
+  overflow-y: auto;
+  max-height: 60vh;
+}
+
+#player-scores::-webkit-scrollbar,
+#add-btn {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #main-title {
+    font-size: 30px;
+  }
+
+  #score-title,
+  #add-score-title {
+    font-size: 15px;
+  }
+
+  #refresh-btn,
+  #submit-btn,
+  #add-btn {
+    font-size: 10px;
+  }
+
+  .add-score-container {
+    display: none;
+  }
+
+  .add-score-container.active,
+  #add-btn {
+    display: block;
+  }
+
+  .score-container.active {
+    display: none;
+  }
+
+  #player-scores {
+    overflow-y: auto;
+    max-height: 75vh;
+  }
 }
