@@ -10,24 +10,24 @@
 <script defer src="runtime.js"></script><script defer src="main.js"></script></head>
 <body>
   <section>
-    <h1 class="pt-4 ps-3" id="main-title">Leaderboard</h1>
+    <h1 class="pt-4 ps-5" id="main-title">Leaderboard</h1>
     <div class="container-fluid mt-5">
       <div class="row justify-content-center">
-        <div class="col-4 p-0 me-5">
+        <div class="col-6 p-0 me-5">
           <div class="d-flex justify-content-between align-items-center">
             <h2 id="score-title" class="m-0">Recent scores</h2>
-            <button type="button" class="btn-outline-info btn fw-bold" id="refresh-btn">Refresh</button>
+            <button type="button" class="btn-outline-warning btn fw-bold" id="refresh-btn">Refresh</button>
           </div>
-          <ul id="player-scores">
+          <ul id="player-scores" class="p-0 mt-4 border border-5 border-warning">
 
           </ul>
         </div>
-        <div class="col-3 ms-5">
+        <div class="col-4 ms-5">
           <h2 id="add-score-title" class="mb-4">Add your score</h2>
           <form class="d-flex flex-column" id="form">
-            <input type="text" placeholder="Your name" class="mb-4 p-2 form-control form-control-color-danger" id="user-name">
-            <input type="text" placeholder="Your score" class="mb-4 p-2 form-control form-control-color-danger" id="user-score">
-            <button type="submit" class="w-25 btn-outline-info fw-bold btn align-self-end px-1" id="submit-btn">Submit</button>
+            <input type="text" placeholder="Your name" class="mb-4 p-2 form-control form-control-color-danger" id="user-name" required>
+            <input type="text" placeholder="Your score" class="mb-4 p-2 form-control form-control-color-danger" id="user-score" required>
+            <button type="submit" class="w-50 btn-outline-warning fs-6 fw-bold btn align-self-end" id="submit-btn">Submit</button>
           </form>
         </div>
       </div>
