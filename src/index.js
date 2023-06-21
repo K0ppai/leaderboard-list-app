@@ -27,3 +27,28 @@ submitBtn.addEventListener('click', (e) => {
   form.reset();
 });
 
+const getData = async () => {
+  const dataFromApi = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ItduN06lGeQQJxOUfeGI/scores/');
+  const result = await dataFromApi.json();
+  return result;
+};
+
+const renderScores = () => {
+  const scoreList = document.getElementById('player-scores');
+  getData().then((data) => {
+    data.result.forEach((element) => {
+      const li = document.createElement('li');
+      li.innerHTML = `${element.user}: ${element.score}`;
+      scoreList.appendChild(li);
+    });
+  });
+};
+
+const refreshBtn = document.getElementById('refresh-btn');
+refreshBtn.addEventListener('click', () => {
+  const scoreList = document.getElementById('player-scores');
+  scoreList.innerHTML = '';
+  renderScores();
+});
+
+renderScores();
