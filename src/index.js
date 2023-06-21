@@ -36,7 +36,7 @@ const getData = async () => {
 const renderScores = () => {
   const scoreList = document.getElementById('player-scores');
   getData().then((data) => {
-    data.result.forEach((element) => {
+    data.result.sort((a, b) => b.score - a.score).forEach((element) => {
       const li = document.createElement('li');
       li.innerHTML = `${element.user}: ${element.score}`;
       scoreList.appendChild(li);
