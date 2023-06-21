@@ -1,21 +1,7 @@
 import './style.css';
 
-// write a function to create a new game session in the api
-// const createGame = async () => {
-//   const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify({ name: 'Mix Match' }),
-//   });
-//   const result = await response.json();
-//   return result;
-// };
-// console.log(createGame());
-
 const postData = async (data) => {
-  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ws8XchMBhruNRRlNtlaw/scores/', {
+  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/76moZNNwdaq0AExYogLl/scores/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -24,6 +10,13 @@ const postData = async (data) => {
   });
   const result = await response.json();
   return result;
+};
+
+const toggle = () => {
+  const addBtnContainer = document.querySelector('.add-score-container');
+  const scoreContainer = document.querySelector('.score-container');
+  addBtnContainer.classList.toggle('active');
+  scoreContainer.classList.toggle('active');
 };
 
 const submitBtn = document.getElementById('submit-btn');
@@ -36,24 +29,16 @@ submitBtn.addEventListener('click', (e) => {
     user: userName,
     score: userScore,
   };
-  const addBtnContainer = document.querySelector('.add-score-container');
-  const scoreContainer = document.querySelector('.score-container');
-  addBtnContainer.classList.toggle('active');
-  scoreContainer.classList.toggle('active');
+  toggle();
   form.reset();
   postData(data);
 });
 
 const addBtn = document.getElementById('add-btn');
-addBtn.addEventListener('click', () => {
-  const addBtnContainer = document.querySelector('.add-score-container');
-  const scoreContainer = document.querySelector('.score-container');
-  addBtnContainer.classList.toggle('active');
-  scoreContainer.classList.toggle('active');
-});
+addBtn.addEventListener('click', toggle);
 
 const getData = async () => {
-  const dataFromApi = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ws8XchMBhruNRRlNtlaw/scores/');
+  const dataFromApi = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/76moZNNwdaq0AExYogLl/scores/');
   const result = await dataFromApi.json();
   return result;
 };
