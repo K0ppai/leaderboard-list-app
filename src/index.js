@@ -39,6 +39,7 @@ const renderScores = () => {
     data.result.sort((a, b) => b.score - a.score).forEach((element) => {
       const li = document.createElement('li');
       li.innerHTML = `${element.user}: ${element.score}`;
+      li.className = 'list-unstyled fs-5 fw-bold p-1 ps-3';
       scoreList.appendChild(li);
     });
   });
