@@ -22,7 +22,6 @@ body {
   background-color: #1d0f39;
 }
 
-/* change border radius top right and bottom left */
 #player-scores {
   border-radius: 0 60px 0 60px;
   overflow: hidden;
