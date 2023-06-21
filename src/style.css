@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
 
-*{
+* {
   color: white;
   font-family: 'Bungee Spice', cursive;
 }
 
-body{
+body {
   background-color: #110820;
 }
 
@@ -18,16 +18,12 @@ body{
   font-size: 35px;
 }
 
-#player-scores li:nth-child(odd) {
-  background-color: none;
-}
-
 #player-scores li:nth-child(even) {
   background-color: #1d0f39;
 }
 
 /* change border radius top right and bottom left */
-#player-scores{
+#player-scores {
   border-radius: 0 60px 0 60px;
   overflow: hidden;
 }
