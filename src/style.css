@@ -5,7 +5,7 @@
   font-family: 'Bungee Spice', cursive;
 }
 
-body {
+.add-score-container,body {
   background-color: #110820;
 }
 
@@ -21,8 +21,37 @@ body {
 #player-scores li:nth-child(even) {
   background-color: #1d0f39;
 }
-
+#player-scores::-webkit-scrollbar,#add-btn {
+  display: none;
+}
 #player-scores {
   border-radius: 0 60px 0 60px;
-  overflow: hidden;
+  overflow-y: auto;
+  max-height: 60vh;
+}
+
+@media screen and (max-width: 768px) {
+  #main-title {
+    font-size: 30px;
+  }
+  #score-title,
+  #add-score-title {
+    font-size: 15px;
+  }
+  #refresh-btn,#submit-btn,#add-btn{
+    font-size: 10px;
+  }
+  .add-score-container{
+    display: none;
+  }
+  .add-score-container.active,#add-btn{
+    display: block;
+  }
+  .score-container.active{
+    display: none;
+  }
+  #player-scores{
+    overflow-y: auto;
+    max-height: 75vh;
+  }
 }

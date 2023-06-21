@@ -36,9 +36,20 @@ submitBtn.addEventListener('click', (e) => {
     user: userName,
     score: userScore,
   };
-
+  const addBtnContainer = document.querySelector('.add-score-container');
+  const scoreContainer = document.querySelector('.score-container');
+  addBtnContainer.classList.toggle('active');
+  scoreContainer.classList.toggle('active');
   form.reset();
   postData(data);
+});
+
+const addBtn = document.getElementById('add-btn');
+addBtn.addEventListener('click', () => {
+  const addBtnContainer = document.querySelector('.add-score-container');
+  const scoreContainer = document.querySelector('.score-container');
+  addBtnContainer.classList.toggle('active');
+  scoreContainer.classList.toggle('active');
 });
 
 const getData = async () => {
